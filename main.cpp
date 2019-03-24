@@ -31,7 +31,7 @@ bool comparePriority(Process* p1, Process* p2){
 }
 
 void fillInstructions(Process* p){ //fills the instruction queue of given process
-    string file = "C:\\Users\\casper\\Desktop\\Cmpe 322\\Project_1\\" + p->fileName + ".txt";
+    string file = "./" + p->fileName + ".txt";
     ifstream infile(file);
     string line;
     while(!infile.eof()){
@@ -78,7 +78,7 @@ int workNonstop(Process *p, int now){ //processes all of the left instructions o
 
 int main() {
 
-    string file = "C:\\Users\\casper\\Desktop\\Cmpe 322\\Project_1\\definition8.txt";
+    string file = "./definition.txt";
     ifstream infile(file);
     string line;
     queue<Process*> jobQueue;
@@ -86,7 +86,7 @@ int main() {
     vector<Process*> temp;
     vector<Process*> forData;
 
-    freopen("C:\\Users\\casper\\Desktop\\Cmpe 322\\Project_1\\output.txt", "w", stdout); // opens output.txt to write
+    freopen("./output.txt", "w", stdout); // opens output.txt to write
 
     int lastPrinted = 0;
 
